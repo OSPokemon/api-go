@@ -1,2 +1,2 @@
 # golang
-Root of go code for OSPokemon
+OSPokemon API for Golang
