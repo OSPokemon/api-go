@@ -12,31 +12,31 @@ type Stat interface {
 }
 
 type BasicStat struct {
-	value int
-	ev    int
-	iv    int
+	VALUE int
+	EV    int
+	IV    int
 }
 
 func (s *BasicStat) Value() int {
-	return s.value
+	return s.VALUE
 }
 
 func (s *BasicStat) SetValue(value int) {
-	s.value = value
+	s.VALUE = value
 }
 
 func (s *BasicStat) EffortValue() int {
-	return s.ev
+	return s.EV
 }
 
 func (s *BasicStat) SetEffortValue(value int) {
-	s.ev = value
+	s.EV = value
 }
 
 func (s *BasicStat) IndividualValue() int {
-	return s.iv
+	return s.IV
 }
 
 func (s *BasicStat) SetIndividualValue(value int) {
-	s.iv = value
+	s.IV = value
 }

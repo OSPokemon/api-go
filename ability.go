@@ -12,31 +12,31 @@ type Ability interface {
 }
 
 type BasicAbility struct {
-	id          int
-	name        string
-	description string
+	ID          int
+	NAME        string
+	DESCRIPTION string
 }
 
 func (a *BasicAbility) Id() int {
-	return a.id
+	return a.ID
 }
 
 func (a *BasicAbility) SetId(id int) {
-	a.id = id
+	a.ID = id
 }
 
 func (a *BasicAbility) Name() string {
-	return a.name
+	return a.NAME
 }
 
 func (a *BasicAbility) SetName(name string) {
-	a.name = name
+	a.NAME = name
 }
 
 func (a *BasicAbility) Description() string {
-	return a.description
+	return a.DESCRIPTION
 }
 
 func (a *BasicAbility) SetDescription(description string) {
-	a.description = description
+	a.DESCRIPTION = description
 }

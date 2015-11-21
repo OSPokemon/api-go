@@ -21,58 +21,58 @@ type ContestCategory interface {
 }
 
 type BasicContestCategory struct {
-	id        int
-	name      string
-	flavor    string
-	color     string
-	stat      string
-	reactions map[int]string
+	ID        int
+	NAME      string
+	FLAVOR    string
+	COLOR     string
+	STAT      string
+	REACTIONS map[int]string
 }
 
 func (cc *BasicContestCategory) Id() int {
-	return cc.id
+	return cc.ID
 }
 
 func (cc *BasicContestCategory) SetId(id int) {
-	cc.id = id
+	cc.ID = id
 }
 
 func (cc *BasicContestCategory) Name() string {
-	return cc.name
+	return cc.NAME
 }
 
 func (cc *BasicContestCategory) SetName(name string) {
-	cc.name = name
+	cc.NAME = name
 }
 
 func (cc *BasicContestCategory) Flavor() string {
-	return cc.flavor
+	return cc.FLAVOR
 }
 
 func (cc *BasicContestCategory) SetFlavor(flavor string) {
-	cc.flavor = flavor
+	cc.FLAVOR = flavor
 }
 
 func (cc *BasicContestCategory) Color() string {
-	return cc.color
+	return cc.COLOR
 }
 
 func (cc *BasicContestCategory) SetColor(color string) {
-	cc.color = color
+	cc.COLOR = color
 }
 
 func (cc *BasicContestCategory) Stat() string {
-	return cc.stat
+	return cc.STAT
 }
 
 func (cc *BasicContestCategory) SetStat(stat string) {
-	cc.stat = stat
+	cc.STAT = stat
 }
 
 func (cc *BasicContestCategory) Reactions() map[int]string {
-	return cc.reactions
+	return cc.REACTIONS
 }
 
 func (cc *BasicContestCategory) SetReactions(reactions map[int]string) {
-	cc.reactions = reactions
+	cc.REACTIONS = reactions
 }

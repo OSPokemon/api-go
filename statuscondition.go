@@ -12,31 +12,31 @@ type StatusCondition interface {
 }
 
 type BasicStatusCondition struct {
-	id       int
-	name     string
-	volatile bool
+	ID       int
+	NAME     string
+	VOLATILE bool
 }
 
 func (sc *BasicStatusCondition) Id() int {
-	return sc.id
+	return sc.ID
 }
 
 func (sc *BasicStatusCondition) SetId(id int) {
-	sc.id = id
+	sc.ID = id
 }
 
 func (sc *BasicStatusCondition) Name() string {
-	return sc.name
+	return sc.NAME
 }
 
 func (sc *BasicStatusCondition) SetName(name string) {
-	sc.name = name
+	sc.NAME = name
 }
 
 func (sc *BasicStatusCondition) Volatile() bool {
-	return sc.volatile
+	return sc.VOLATILE
 }
 
 func (sc *BasicStatusCondition) SetVolatile(volatile bool) {
-	sc.volatile = volatile
+	sc.VOLATILE = volatile
 }
