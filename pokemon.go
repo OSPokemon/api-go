@@ -60,175 +60,175 @@ type Pokemon interface {
 }
 
 type BasicPokemon struct {
-	id               int
-	name             string
-	species          int
-	level            int
-	experience       int
-	ability          int
-	friendship       int
-	gender           int
-	nature           int
-	height           float64
-	weight           float64
-	originalTrainer  int
-	shiny            bool
-	item             int
-	stats            map[string]Stat
-	skills           []Skill
-	statusConditions []int
-	markings         []string
-	ribbons          []string
+	ID               int
+	NAME             string
+	SPECIES          int
+	LEVEL            int
+	EXPERIENCE       int
+	ABILITY          int
+	FRIENDSHIP       int
+	GENDER           int
+	NATURE           int
+	HEIGHT           float64
+	WEIGHT           float64
+	ORIGINALTRAINER  int
+	SHINY            bool
+	ITEM             int
+	STATS            map[string]Stat
+	SKILLS           []Skill
+	STATUSCONDITIONS []int
+	MARKINGS         []string
+	RIBBONS          []string
 }
 
 func (p *BasicPokemon) Id() int {
-	return p.id
+	return p.ID
 }
 
 func (p *BasicPokemon) SetId(id int) {
-	p.id = id
+	p.ID = id
 }
 
 func (p *BasicPokemon) Name() string {
-	return p.name
+	return p.NAME
 }
 
 func (p *BasicPokemon) SetName(name string) {
-	p.name = name
+	p.NAME = name
 }
 
 func (p *BasicPokemon) Species() int {
-	return p.species
+	return p.SPECIES
 }
 
 func (p *BasicPokemon) SetSpecies(species int) {
-	p.species = species
+	p.SPECIES = species
 }
 
 func (p *BasicPokemon) Level() int {
-	return p.level
+	return p.LEVEL
 }
 
 func (p *BasicPokemon) SetLevel(level int) {
-	p.level = level
+	p.LEVEL = level
 }
 
 func (p *BasicPokemon) Experience() int {
-	return p.experience
+	return p.EXPERIENCE
 }
 
 func (p *BasicPokemon) SetExperience(experience int) {
-	p.experience = experience
+	p.EXPERIENCE = experience
 }
 
 func (p *BasicPokemon) Ability() int {
-	return p.ability
+	return p.ABILITY
 }
 
 func (p *BasicPokemon) SetAbility(ability int) {
-	p.ability = ability
+	p.ABILITY = ability
 }
 
 func (p *BasicPokemon) Friendship() int {
-	return p.friendship
+	return p.FRIENDSHIP
 }
 
 func (p *BasicPokemon) SetFriendship(friendship int) {
-	p.friendship = friendship
+	p.FRIENDSHIP = friendship
 }
 
 func (p *BasicPokemon) Gender() int {
-	return p.gender
+	return p.GENDER
 }
 
 func (p *BasicPokemon) SetGender(gender int) {
-	p.gender = gender
+	p.GENDER = gender
 }
 
 func (p *BasicPokemon) Nature() int {
-	return p.nature
+	return p.NATURE
 }
 
 func (p *BasicPokemon) SetNature(nature int) {
-	p.nature = nature
+	p.NATURE = nature
 }
 
 func (p *BasicPokemon) Height() float64 {
-	return p.height
+	return p.HEIGHT
 }
 
 func (p *BasicPokemon) SetHeight(height float64) {
-	p.height = height
+	p.HEIGHT = height
 }
 
 func (p *BasicPokemon) Weight() float64 {
-	return p.weight
+	return p.WEIGHT
 }
 
 func (p *BasicPokemon) SetWeight(weight float64) {
-	p.weight = weight
+	p.WEIGHT = weight
 }
 
 func (p *BasicPokemon) OriginalTrainer() int {
-	return p.originalTrainer
+	return p.ORIGINALTRAINER
 }
 
 func (p *BasicPokemon) SetOriginalTrainer(originalTrainer int) {
-	p.originalTrainer = originalTrainer
+	p.ORIGINALTRAINER = originalTrainer
 }
 
 func (p *BasicPokemon) Shiny() bool {
-	return p.shiny
+	return p.SHINY
 }
 
 func (p *BasicPokemon) SetShiny(shiny bool) {
-	p.shiny = shiny
+	p.SHINY = shiny
 }
 
 func (p *BasicPokemon) Item() int {
-	return p.item
+	return p.ITEM
 }
 
 func (p *BasicPokemon) SetItem(item int) {
-	p.item = item
+	p.ITEM = item
 }
 
 func (p *BasicPokemon) Stats() map[string]Stat {
-	return p.stats
+	return p.STATS
 }
 
 func (p *BasicPokemon) SetStats(stats map[string]Stat) {
-	p.stats = stats
+	p.STATS = stats
 }
 
 func (p *BasicPokemon) Skills() []Skill {
-	return p.skills
+	return p.SKILLS
 }
 
 func (p *BasicPokemon) SetSkills(skills []Skill) {
-	p.skills = skills
+	p.SKILLS = skills
 }
 
 func (p *BasicPokemon) StatusConditions() []int {
-	return p.statusConditions
+	return p.STATUSCONDITIONS
 }
 
 func (p *BasicPokemon) SetStatusConditions(statusConditions []int) {
-	p.statusConditions = statusConditions
+	p.STATUSCONDITIONS = statusConditions
 }
 
 func (p *BasicPokemon) Markings() []string {
-	return p.markings
+	return p.MARKINGS
 }
 
 func (p *BasicPokemon) SetMarkings(markings []string) {
-	p.markings = markings
+	p.MARKINGS = markings
 }
 
 func (p *BasicPokemon) Ribbons() []string {
-	return p.ribbons
+	return p.RIBBONS
 }
 
 func (p *BasicPokemon) SetRibbons(ribbons []string) {
-	p.ribbons = ribbons
+	p.RIBBONS = ribbons
 }

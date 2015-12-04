@@ -84,247 +84,247 @@ type Species interface {
 }
 
 type BasicSpecies struct {
-	id              int
-	name            string
-	tag             string
-	description     string
-	types           []int
-	abilities       []int
-	hiddenAbility   int
-	genderless      bool
-	genderRatio     float64
-	catchRate       int
-	breedable       bool
-	eggGroups       []string
-	eggCycles       int
-	height          float64
-	weight          float64
-	experienceYield int
-	experienceCurve int
-	effortValues    map[string]int
-	bodyStyle       string
-	color           string
-	tameness        int
-	stats           map[string]int
-	evolutions      []int
-	moveLists       map[int][]int
-	eggMoves        []int
-	machineMoves    []int
-	tutorMoves      []int
+	ID              int
+	NAME            string
+	TAG             string
+	DESCRIPTION     string
+	TYPES           []int
+	ABILITIES       []int
+	HIDDENABILITY   int
+	GENDERLESS      bool
+	GENDERRATIO     float64
+	CATCHRATE       int
+	BREEDABLE       bool
+	EGGGROUPS       []string
+	EGGCYCLES       int
+	HEIGHT          float64
+	WEIGHT          float64
+	EXPERIENCEYIELD int
+	EXPERIENCECURVE int
+	EFFORTVALUES    map[string]int
+	BODYSTYLE       string
+	COLOR           string
+	TAMENESS        int
+	STATS           map[string]int
+	EVOLUTIONS      []int
+	MOVELISTS       map[int][]int
+	EGGMOVES        []int
+	MACHINEMOVES    []int
+	TUTORMOVES      []int
 }
 
 func (s *BasicSpecies) Id() int {
-	return s.id
+	return s.ID
 }
 
 func (s *BasicSpecies) SetId(id int) {
-	s.id = id
+	s.ID = id
 }
 
 func (s *BasicSpecies) Name() string {
-	return s.name
+	return s.NAME
 }
 
 func (s *BasicSpecies) SetName(name string) {
-	s.name = name
+	s.NAME = name
 }
 
 func (s *BasicSpecies) Tag() string {
-	return s.tag
+	return s.TAG
 }
 
 func (s *BasicSpecies) SetTag(tag string) {
-	s.tag = tag
+	s.TAG = tag
 }
 
 func (s *BasicSpecies) Description() string {
-	return s.description
+	return s.DESCRIPTION
 }
 
 func (s *BasicSpecies) SetDescription(desctiption string) {
-	s.description = desctiption
+	s.DESCRIPTION = desctiption
 }
 
 func (s *BasicSpecies) Types() []int {
-	return s.types
+	return s.TYPES
 }
 
 func (s *BasicSpecies) SetTypes(types []int) {
-	s.types = types
+	s.TYPES = types
 }
 
 func (s *BasicSpecies) Abilities() []int {
-	return s.abilities
+	return s.ABILITIES
 }
 
 func (s *BasicSpecies) SetAbilities(abilities []int) {
-	s.abilities = abilities
+	s.ABILITIES = abilities
 }
 
 func (s *BasicSpecies) HiddenAbility() int {
-	return s.hiddenAbility
+	return s.HIDDENABILITY
 }
 
 func (s *BasicSpecies) SetHiddenAbility(hiddenAbility int) {
-	s.hiddenAbility = hiddenAbility
+	s.HIDDENABILITY = hiddenAbility
 }
 
 func (s *BasicSpecies) Genderless() bool {
-	return s.genderless
+	return s.GENDERLESS
 }
 
 func (s *BasicSpecies) SetGenderless(genderless bool) {
-	s.genderless = genderless
+	s.GENDERLESS = genderless
 }
 
 func (s *BasicSpecies) GenderRatio() float64 {
-	return s.genderRatio
+	return s.GENDERRATIO
 }
 
 func (s *BasicSpecies) SetGenderRatio(genderRatio float64) {
-	s.genderRatio = genderRatio
+	s.GENDERRATIO = genderRatio
 }
 
 func (s *BasicSpecies) CatchRate() int {
-	return s.catchRate
+	return s.CATCHRATE
 }
 
 func (s *BasicSpecies) SetCatchRate(catchRate int) {
-	s.catchRate = catchRate
+	s.CATCHRATE = catchRate
 }
 
 func (s *BasicSpecies) Breedable() bool {
-	return s.breedable
+	return s.BREEDABLE
 }
 
 func (s *BasicSpecies) SetBreedable(breedable bool) {
-	s.breedable = breedable
+	s.BREEDABLE = breedable
 }
 
 func (s *BasicSpecies) EggGroups() []string {
-	return s.eggGroups
+	return s.EGGGROUPS
 }
 
 func (s *BasicSpecies) SetEggGroups(eggGroups []string) {
-	s.eggGroups = eggGroups
+	s.EGGGROUPS = eggGroups
 }
 
 func (s *BasicSpecies) EggCycles() int {
-	return s.eggCycles
+	return s.EGGCYCLES
 }
 
 func (s *BasicSpecies) SetEggCycles(eggCycles int) {
-	s.eggCycles = eggCycles
+	s.EGGCYCLES = eggCycles
 }
 
 func (s *BasicSpecies) Height() float64 {
-	return s.height
+	return s.HEIGHT
 }
 
 func (s *BasicSpecies) SetHeight(height float64) {
-	s.height = height
+	s.HEIGHT = height
 }
 
 func (s *BasicSpecies) Weight() float64 {
-	return s.weight
+	return s.WEIGHT
 }
 
 func (s *BasicSpecies) SetWeight(weight float64) {
-	s.weight = weight
+	s.WEIGHT = weight
 }
 
 func (s *BasicSpecies) ExperienceYield() int {
-	return s.experienceYield
+	return s.EXPERIENCEYIELD
 }
 
 func (s *BasicSpecies) SetExperienceYield(experienceYield int) {
-	s.experienceYield = experienceYield
+	s.EXPERIENCEYIELD = experienceYield
 }
 
 func (s *BasicSpecies) ExperienceCurve() int {
-	return s.experienceCurve
+	return s.EXPERIENCECURVE
 }
 
 func (s *BasicSpecies) SetExperienceCurve(experienceCurve int) {
-	s.experienceCurve = experienceCurve
+	s.EXPERIENCECURVE = experienceCurve
 }
 
 func (s *BasicSpecies) EffortValues() map[string]int {
-	return s.effortValues
+	return s.EFFORTVALUES
 }
 
 func (s *BasicSpecies) SetEffortValues(effortValues map[string]int) {
-	s.effortValues = effortValues
+	s.EFFORTVALUES = effortValues
 }
 
 func (s *BasicSpecies) BodyStyle() string {
-	return s.bodyStyle
+	return s.BODYSTYLE
 }
 
 func (s *BasicSpecies) SetBodyStyle(bodyStyle string) {
-	s.bodyStyle = bodyStyle
+	s.BODYSTYLE = bodyStyle
 }
 
 func (s *BasicSpecies) Color() string {
-	return s.color
+	return s.COLOR
 }
 
 func (s *BasicSpecies) SetColor(color string) {
-	s.color = color
+	s.COLOR = color
 }
 
 func (s *BasicSpecies) Tameness() int {
-	return s.tameness
+	return s.TAMENESS
 }
 
 func (s *BasicSpecies) SetTameness(tameness int) {
-	s.tameness = tameness
+	s.TAMENESS = tameness
 }
 
 func (s *BasicSpecies) Stats() map[string]int {
-	return s.stats
+	return s.STATS
 }
 
 func (s *BasicSpecies) SetStats(stats map[string]int) {
-	s.stats = stats
+	s.STATS = stats
 }
 
 func (s *BasicSpecies) Evolutions() []int {
-	return s.evolutions
+	return s.EVOLUTIONS
 }
 
 func (s *BasicSpecies) SetEvolutions(evolutions []int) {
-	s.evolutions = evolutions
+	s.EVOLUTIONS = evolutions
 }
 
 func (s *BasicSpecies) MoveLists() map[int][]int {
-	return s.moveLists
+	return s.MOVELISTS
 }
 
 func (s *BasicSpecies) SetMoveLists(moveLists map[int][]int) {
-	s.moveLists = moveLists
+	s.MOVELISTS = moveLists
 }
 
 func (s *BasicSpecies) EggMoves() []int {
-	return s.eggMoves
+	return s.EGGMOVES
 }
 
 func (s *BasicSpecies) SetEggMoves(eggMoves []int) {
-	s.eggMoves = eggMoves
+	s.EGGMOVES = eggMoves
 }
 
 func (s *BasicSpecies) MachineMoves() []int {
-	return s.machineMoves
+	return s.MACHINEMOVES
 }
 
 func (s *BasicSpecies) SetMachineMoves(machineMoves []int) {
-	s.machineMoves = machineMoves
+	s.MACHINEMOVES = machineMoves
 }
 
 func (s *BasicSpecies) TutorMoves() []int {
-	return s.tutorMoves
+	return s.TUTORMOVES
 }
 
 func (s *BasicSpecies) SetTutorMoves(tutorMoves []int) {
-	s.tutorMoves = tutorMoves
+	s.TUTORMOVES = tutorMoves
 }
