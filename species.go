@@ -113,6 +113,12 @@ type BasicSpecies struct {
 	TUTORMOVES      []int
 }
 
+var AllSpecies = make(map[int]Species)
+
+var LoadSpecies func(speciesId int) (Species, error)
+var CreateSpecies func(name string) (Species, error)
+var SaveSpecies func(species Species) error
+
 func (s *BasicSpecies) Id() int {
 	return s.ID
 }
@@ -327,4 +333,14 @@ func (s *BasicSpecies) TutorMoves() []int {
 
 func (s *BasicSpecies) SetTutorMoves(tutorMoves []int) {
 	s.TUTORMOVES = tutorMoves
+}
+
+func GetSpecies(speciesId int) Species {
+	if AllSpecies[speciesId] == nil {
+		species, _ := LoadSpecies(speciesId)
+
+		AllSpecies[speciesId] = species
+	}
+
+	return AllSpecies[speciesId]
 }
