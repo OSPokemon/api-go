@@ -76,3 +76,12 @@ func (t *BasicTrainer) Pokemon() []int {
 func (t *BasicTrainer) SetPokemon(pokemon []int) {
 	t.POKEMON = pokemon
 }
+
+func MakeBasicTrainer(name string, class int) BasicTrainer {
+	return BasicTrainer{
+		NAME:    name,
+		CLASS:   class,
+		ITEMS:   make(map[int]int),
+		POKEMON: make([]int, 0),
+	}
+}

@@ -105,19 +105,13 @@ type BasicSpecies struct {
 	BODYSTYLE       string
 	COLOR           string
 	TAMENESS        int
-	STATS           map[string]int
+	STATS           map[string]float64
 	EVOLUTIONS      []int
 	MOVELISTS       map[int][]int
 	EGGMOVES        []int
 	MACHINEMOVES    []int
 	TUTORMOVES      []int
 }
-
-var AllSpecies = make(map[int]Species)
-
-var LoadSpecies func(speciesId int) (Species, error)
-var CreateSpecies func(name string) (Species, error)
-var SaveSpecies func(species Species) error
 
 func (s *BasicSpecies) Id() int {
 	return s.ID
@@ -287,11 +281,11 @@ func (s *BasicSpecies) SetTameness(tameness int) {
 	s.TAMENESS = tameness
 }
 
-func (s *BasicSpecies) Stats() map[string]int {
+func (s *BasicSpecies) Stats() map[string]float64 {
 	return s.STATS
 }
 
-func (s *BasicSpecies) SetStats(stats map[string]int) {
+func (s *BasicSpecies) SetStats(stats map[string]float64) {
 	s.STATS = stats
 }
 
@@ -335,12 +329,18 @@ func (s *BasicSpecies) SetTutorMoves(tutorMoves []int) {
 	s.TUTORMOVES = tutorMoves
 }
 
-func GetSpecies(speciesId int) Species {
-	if AllSpecies[speciesId] == nil {
-		species, _ := LoadSpecies(speciesId)
-
-		AllSpecies[speciesId] = species
+func MakeBasicSpecies(name string) BasicSpecies {
+	return BasicSpecies{
+		NAME:         name,
+		TYPES:        make([]int, 0),
+		ABILITIES:    make([]int, 0),
+		EGGGROUPS:    make([]string, 0),
+		EFFORTVALUES: make(map[string]int),
+		STATS:        make(map[string]float64),
+		EVOLUTIONS:   make([]int, 0),
+		MOVELISTS:    make(map[int][]int),
+		EGGMOVES:     make([]int, 0),
+		MACHINEMOVES: make([]int, 0),
+		TUTORMOVES:   make([]int, 0),
 	}
-
-	return AllSpecies[speciesId]
 }

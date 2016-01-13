@@ -232,3 +232,15 @@ func (p *BasicPokemon) Ribbons() []string {
 func (p *BasicPokemon) SetRibbons(ribbons []string) {
 	p.RIBBONS = ribbons
 }
+
+func MakeBasicPokemon(name string, species int) BasicPokemon {
+	return BasicPokemon{
+		NAME:             name,
+		SPECIES:          species,
+		STATS:            make(map[string]Stat),
+		SKILLS:           make([]Skill, 0),
+		STATUSCONDITIONS: make([]int, 0),
+		MARKINGS:         make([]string, 0),
+		RIBBONS:          make([]string, 0),
+	}
+}
