@@ -1,4 +1,4 @@
-package ospokemon
+package stat
 
 type Stat interface {
 	Value() int

@@ -1,4 +1,4 @@
-package ospokemon
+package pokemon
 
 type Species interface {
 	Id() int

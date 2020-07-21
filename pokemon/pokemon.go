@@ -1,4 +1,9 @@
-package ospokemon
+package pokemon
+
+import (
+	"github.com/ospokemon/api-go/skill"
+	"github.com/ospokemon/api-go/stat"
+)
 
 type Pokemon interface {
 	Id() int
@@ -43,11 +48,11 @@ type Pokemon interface {
 	Item() int
 	SetItem(item int)
 
-	Stats() map[string]Stat
-	SetStats(stats map[string]Stat)
+	Stats() map[string]stat.Stat
+	SetStats(stats map[string]stat.Stat)
 
-	Skills() []Skill
-	SetSkills(skills []Skill)
+	Skills() []skill.Skill
+	SetSkills(skills []skill.Skill)
 
 	StatusConditions() []int
 	SetStatusConditions(statusConditions []int)
@@ -74,8 +79,8 @@ type BasicPokemon struct {
 	ORIGINALTRAINER  int
 	SHINY            bool
 	ITEM             int
-	STATS            map[string]Stat
-	SKILLS           []Skill
+	STATS            map[string]stat.Stat
+	SKILLS           []skill.Skill
 	STATUSCONDITIONS []int
 	MARKINGS         []string
 	RIBBONS          []string
@@ -193,19 +198,19 @@ func (p *BasicPokemon) SetItem(item int) {
 	p.ITEM = item
 }
 
-func (p *BasicPokemon) Stats() map[string]Stat {
+func (p *BasicPokemon) Stats() map[string]stat.Stat {
 	return p.STATS
 }
 
-func (p *BasicPokemon) SetStats(stats map[string]Stat) {
+func (p *BasicPokemon) SetStats(stats map[string]stat.Stat) {
 	p.STATS = stats
 }
 
-func (p *BasicPokemon) Skills() []Skill {
+func (p *BasicPokemon) Skills() []skill.Skill {
 	return p.SKILLS
 }
 
-func (p *BasicPokemon) SetSkills(skills []Skill) {
+func (p *BasicPokemon) SetSkills(skills []skill.Skill) {
 	p.SKILLS = skills
 }
 
@@ -237,8 +242,8 @@ func MakeBasicPokemon(name string, species int) BasicPokemon {
 	return BasicPokemon{
 		NAME:             name,
 		SPECIES:          species,
-		STATS:            make(map[string]Stat),
-		SKILLS:           make([]Skill, 0),
+		STATS:            make(map[string]stat.Stat),
+		SKILLS:           make([]skill.Skill, 0),
 		STATUSCONDITIONS: make([]int, 0),
 		MARKINGS:         make([]string, 0),
 		RIBBONS:          make([]string, 0),

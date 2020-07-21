@@ -1,4 +1,4 @@
-package ospokemon
+package skill
 
 type Skill interface {
 	Move() int
