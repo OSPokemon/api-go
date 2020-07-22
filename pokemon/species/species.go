@@ -30,9 +30,9 @@ type T struct {
 	TutorMoves      []int
 }
 
-func New(id int, name string) *T {
+func New(id *id.T) *T {
 	return &T{
-		Name:         name,
+		ID:           id,
 		Types:        make([]int, 0),
 		Abilities:    make([]int, 0),
 		EggGroups:    make([]string, 0),
